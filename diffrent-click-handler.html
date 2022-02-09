@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 onclick="console.log(7)">Button niye clickbaji</h1>
+
+    <!-- onclick alert button -->
+    <button onclick="alert('Hello dear')">Click: alert </button>
+
+    <!-- methord 1: inline onclick handler  -->
+    <button onclick="document.body.style.background = 'lightblue'">Click: lightblue</button>
+
+
+
+    <!-- methord 2: onclick handler with call function -->
+    <button onclick="makeTomato()">Click: tomato</button>
+
+
+
+
+    <!-- methord 3: -->
+    <button id="yellow-btn">click: yellow</button>
+
+
+
+    <!-- methord: 4 -->
+    <button id="green-btn">Click: green</button>
+
+
+
+    <!-- methord: 5 -->
+    <button id="khaki-btn">click: khaki</button>
+
+
+
+    <!-- methord: 6 -->
+    <button id="salmon-btn">click:Salmon</button>
+
+
+
+    <!-- methord 7 -->
+    <button id="skyblue-btn">Click skyblue</button>
+
+
+
+    <script>
+        // methord: 2
+        function makeTomato() {
+            document.body.style.backgroundColor = 'tomato';
+        }
+
+
+        // methord: 3
+        const yelloBtn = document.getElementById('yellow-btn');
+        function makeYellow() {
+            document.body.style.backgroundColor = 'yellow';
+        }
+        yelloBtn.onclick = makeYellow;
+
+
+
+
+        // methord: 4
+        const greenBtn = document.getElementById('green-btn');
+        greenBtn.onclick = function () {
+            document.body.style.backgroundColor = 'green';
+        }
+
+
+
+        // methord: 5
+        const khakiBtn = document.getElementById('khaki-btn');
+        function makeKhaki() {
+            document.body.style.backgroundColor = 'khaki';
+        }
+        khakiBtn.addEventListener('click', makeKhaki);
+
+
+
+        // methor: 6
+        const salmonBtn = document.getElementById('salmon-btn');
+        salmonBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'salmon';
+        });
+
+
+        // methor: 7
+        document.getElementById('skyblue-btn').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'skyblue';
+        })
+
+
+    </script>
+</body>
+
+</html>
